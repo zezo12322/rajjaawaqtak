@@ -1,0 +1,138 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - link "رجّع وقتك رجّع وقتك" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "رجّع وقتك" [ref=e7]
+        - generic [ref=e8]: رجّع وقتك
+      - generic [ref=e9]:
+        - link "الرئيسية" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "عن المبادرة" [ref=e11] [cursor=pointer]:
+          - /url: /about
+        - link "اعرف واتحدى" [ref=e12] [cursor=pointer]:
+          - /url: /awareness
+        - link "نصايح المجتمع" [ref=e13] [cursor=pointer]:
+          - /url: /advices
+        - link "تطوّع" [ref=e14] [cursor=pointer]:
+          - /url: /volunteer
+        - link "تواصل" [ref=e15] [cursor=pointer]:
+          - /url: /contact
+      - link "ادعمنا" [ref=e17] [cursor=pointer]:
+        - /url: /donate
+        - img [ref=e18]
+        - text: ادعمنا
+  - main [ref=e20]:
+    - generic [ref=e22]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - img [ref=e26]
+          - text: انضم لينا
+        - heading "اتطوّع معانا" [level=2] [ref=e31]
+        - paragraph [ref=e32]: فريق رجّع وقتك بيكبر بناس مؤمنة بالرسالة. سجّل بياناتك وهنتواصل معاك.
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]: الاسم *
+            - textbox "اسمك" [ref=e39]
+          - generic [ref=e40]:
+            - generic [ref=e41]: رقم التواصل *
+            - textbox "01xxxxxxxxx" [ref=e42]
+        - generic [ref=e43]:
+          - generic [ref=e44]: المدينة
+          - textbox "مدينتك" [ref=e45]
+        - generic [ref=e46]:
+          - generic [ref=e47]: بتحب تساعد في إيه؟
+          - combobox [ref=e48]:
+            - option "تنظيم الورش" [selected]
+            - option "تصميم ومحتوى"
+            - option "سوشيال ميديا"
+            - option "تطوّع ميداني"
+            - option "أي حاجة تنفع"
+        - generic [ref=e49]:
+          - generic [ref=e50]: رسالة (اختياري)
+          - textbox "عايز تقولنا حاجة؟" [ref=e51]
+        - button "سجّل كمتطوّع" [ref=e52] [cursor=pointer]
+    - generic [ref=e54]:
+      - generic [ref=e56]:
+        - generic [ref=e57]:
+          - img [ref=e58]
+          - text: تواصل معانا
+        - heading "قرّبنا منك" [level=2] [ref=e60]
+        - paragraph [ref=e61]: تابعنا على السوشيال ميديا، أو كلّمنا مباشرة للتطوّع والاستفسار.
+      - generic [ref=e62]:
+        - generic [ref=e64]:
+          - heading "صفحات المبادرة" [level=3] [ref=e65]
+          - generic [ref=e66]:
+            - link "واتساب" [ref=e67] [cursor=pointer]:
+              - /url: https://wa.me/201026319025
+              - img [ref=e69]
+              - generic [ref=e71]: واتساب
+              - img [ref=e73]
+            - link "إنستجرام" [ref=e75] [cursor=pointer]:
+              - /url: https://www.instagram.com/rag3_waktk?igsh=YjNza3A1cTY4M2cz
+              - img [ref=e77]
+              - generic [ref=e79]: إنستجرام
+              - img [ref=e81]
+            - link "تيليجرام" [ref=e83] [cursor=pointer]:
+              - /url: https://t.me/rag3waktk
+              - img [ref=e85]
+              - generic [ref=e87]: تيليجرام
+              - img [ref=e89]
+            - link "تيك توك" [ref=e91] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@user7105491487951?_r=1&_t=ZS-95paa8RFSA0
+              - img [ref=e93]
+              - generic [ref=e95]: تيك توك
+              - img [ref=e97]
+            - link "فيسبوك" [ref=e99] [cursor=pointer]:
+              - /url: https://www.facebook.com/share/18RcozLb5u/
+              - img [ref=e101]
+              - generic [ref=e103]: فيسبوك
+              - img [ref=e105]
+        - generic [ref=e108]:
+          - img [ref=e110]
+          - paragraph [ref=e112]: للتواصل والانضمام لفريق المبادرة
+          - button "01026319025" [ref=e113] [cursor=pointer]
+          - paragraph [ref=e114]: اضغط لنسخ الرقم · متاحين على واتساب
+  - contentinfo [ref=e115]:
+    - generic [ref=e116]:
+      - generic [ref=e117]:
+        - generic [ref=e118]:
+          - img "رجّع وقتك" [ref=e120]
+          - generic [ref=e121]: رجّع وقتك
+        - paragraph [ref=e122]: مبادرة مجتمعية من أجل حياة أفضل بعيداً عن الشاشات — الموبايل مش حياتك.. حياتك بره الشاشة.
+      - generic [ref=e123]:
+        - heading "روابط سريعة" [level=4] [ref=e124]
+        - list [ref=e125]:
+          - listitem [ref=e126]:
+            - link "عن المبادرة" [ref=e127] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e128]:
+            - link "اعرف واتحدى" [ref=e129] [cursor=pointer]:
+              - /url: /awareness
+          - listitem [ref=e130]:
+            - link "نصايح المجتمع" [ref=e131] [cursor=pointer]:
+              - /url: /advices
+          - listitem [ref=e132]:
+            - link "تطوّع معانا" [ref=e133] [cursor=pointer]:
+              - /url: /volunteer
+          - listitem [ref=e134]:
+            - link "ادعم المبادرة" [ref=e135] [cursor=pointer]:
+              - /url: /donate
+          - listitem [ref=e136]:
+            - link "تواصل" [ref=e137] [cursor=pointer]:
+              - /url: /contact
+      - generic [ref=e138]:
+        - heading "تابعنا" [level=4] [ref=e139]
+        - generic [ref=e140]:
+          - link "واتساب" [ref=e141] [cursor=pointer]:
+            - /url: https://wa.me/201026319025
+          - link "إنستجرام" [ref=e142] [cursor=pointer]:
+            - /url: https://www.instagram.com/rag3_waktk?igsh=YjNza3A1cTY4M2cz
+          - link "تيليجرام" [ref=e143] [cursor=pointer]:
+            - /url: https://t.me/rag3waktk
+          - link "تيك توك" [ref=e144] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@user7105491487951?_r=1&_t=ZS-95paa8RFSA0
+          - link "فيسبوك" [ref=e145] [cursor=pointer]:
+            - /url: https://www.facebook.com/share/18RcozLb5u/
+    - generic [ref=e147]: © 2026 مبادرة رجّع وقتك — كل الحقوق محفوظة

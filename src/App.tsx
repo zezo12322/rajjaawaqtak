@@ -1,0 +1,31 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { ToastProvider } from "./components/ui/Toast"
+import Layout from "./components/Layout"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import Awareness from "./pages/Awareness"
+import Advices from "./pages/Advices"
+import VolunteerPage from "./pages/VolunteerPage"
+import DonatePage from "./pages/DonatePage"
+import ContactPage from "./pages/ContactPage"
+
+export default function App() {
+  return (
+    <ToastProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/awareness" element={<Awareness />} />
+            <Route path="/advices" element={<Advices />} />
+            <Route path="/volunteer" element={<VolunteerPage />} />
+            <Route path="/donate" element={<DonatePage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="*" element={<Home />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ToastProvider>
+  )
+}

@@ -1,0 +1,345 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - link "رجّع وقتك رجّع وقتك" [ref=e5] [cursor=pointer]:
+        - /url: "#top"
+        - img "رجّع وقتك" [ref=e6]
+        - generic [ref=e7]: رجّع وقتك
+      - generic [ref=e8]:
+        - link "عن المبادرة" [ref=e9] [cursor=pointer]:
+          - /url: "#about"
+        - link "حقائق" [ref=e10] [cursor=pointer]:
+          - /url: "#facts"
+        - link "اختبر نفسك" [ref=e11] [cursor=pointer]:
+          - /url: "#quiz"
+        - link "التحدي" [ref=e12] [cursor=pointer]:
+          - /url: "#challenge"
+        - link "نصايح" [ref=e13] [cursor=pointer]:
+          - /url: "#advices"
+        - link "تطوّع" [ref=e14] [cursor=pointer]:
+          - /url: "#volunteer"
+      - link "ادعمنا ❤" [ref=e16] [cursor=pointer]:
+        - /url: "#donate"
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e20]:
+        - img "رجّع وقتك" [ref=e23]
+        - generic [ref=e24]: 🎯 مبادرة مجتمعية للتوعية الرقمية
+        - heading "رجّع وقتك" [level=1] [ref=e25]
+        - paragraph [ref=e26]: الموبايل مش حياتك.. حياتك بره الشاشة
+        - paragraph [ref=e27]: مبادرة بتساعد الشباب يرجّعوا السيطرة على وقتهم وحياتهم بعيداً عن إدمان الشاشات — بالوعي، والتحدي، والتجربة الحقيقية.
+        - generic [ref=e28]:
+          - link "ابدأ — اختبر نفسك ✦" [ref=e29] [cursor=pointer]:
+            - /url: "#quiz"
+          - link "اتطوّع معانا 🤝" [ref=e30] [cursor=pointer]:
+            - /url: "#volunteer"
+      - link "اعرف أكتر ↓" [ref=e31] [cursor=pointer]:
+        - /url: "#about"
+        - generic [ref=e32]: اعرف أكتر
+        - generic [ref=e33]: ↓
+    - generic [ref=e37]:
+      - generic [ref=e38]:
+        - generic [ref=e39]: ٠+
+        - paragraph [ref=e40]: شاب نستهدفهم
+      - generic [ref=e41]:
+        - text: ٠
+        - paragraph [ref=e42]: نصيحة شاركها الناس
+      - generic [ref=e43]:
+        - text: ٠
+        - paragraph [ref=e44]: يوم تكسبها بساعة يومياً
+      - generic [ref=e45]:
+        - text: ٠
+        - paragraph [ref=e46]: أيام تحدي يغيّر عادتك
+    - generic [ref=e48]:
+      - generic [ref=e50]:
+        - generic [ref=e51]: 🎯 عن المبادرة
+        - heading "ليه «رجّع وقتك»؟" [level=2] [ref=e52]
+        - paragraph [ref=e53]: الشاشات بتاخد من وقتنا أكتر مما نتخيّل. إحنا هنا علشان نرجّع التوازن — مش بالحرمان، لكن بالوعي والاختيار.
+      - generic [ref=e54]:
+        - generic [ref=e56]:
+          - heading "رسالتنا" [level=3] [ref=e57]
+          - paragraph [ref=e58]: مبادرة مجتمعية تهدف لتوعية النشء والشباب بمخاطر الإدمان الرقمي، من خلال برامج وورش تفاعلية في مراكز الشباب والمدارس. هدفنا إننا نساعد كل شاب وفتاة يستعيدوا السيطرة على وقتهم، ويبنوا علاقة صحية ومتوازنة مع التكنولوجيا.
+          - generic [ref=e59]:
+            - generic [ref=e60]: مراكز الشباب
+            - generic [ref=e61]: المدارس
+            - generic [ref=e62]: توعية رقمية
+            - generic [ref=e63]: صحة نفسية
+            - generic [ref=e64]: ورش تفاعلية
+        - generic [ref=e66]:
+          - generic [ref=e67]: 🎯
+          - generic [ref=e68]: "+300"
+          - paragraph [ref=e69]: شاب وفتاة
+          - paragraph [ref=e70]: نستهدف توعيتهم بمخاطر الإدمان الرقمي خلال المرحلة الأولى من المبادرة.
+    - generic [ref=e72]:
+      - generic [ref=e74]:
+        - generic [ref=e75]: 💡 حقائق تهمّك
+        - heading "إيه اللي بيعمله الموبايل فينا؟" [level=2] [ref=e76]
+        - paragraph [ref=e77]: أرقام وحقائق بسيطة ممكن تغيّر نظرتك لوقتك.
+      - generic [ref=e78]:
+        - generic [ref=e80]:
+          - generic [ref=e81]: ⏱️
+          - heading "15 يوم في السنة" [level=3] [ref=e82]
+          - paragraph [ref=e83]: تقليل ساعة واحدة فقط من هاتفك يومياً يوفّر لك 15 يوماً كاملاً كل سنة.
+        - generic [ref=e85]:
+          - generic [ref=e86]: 🧠
+          - heading "96 مرة يومياً" [level=3] [ref=e87]
+          - paragraph [ref=e88]: المتوسط أن الإنسان يتفقّد هاتفه 96 مرة في اليوم — أي مرة كل 10 دقائق تقريباً.
+        - generic [ref=e90]:
+          - generic [ref=e91]: 🌙
+          - heading "الضوء الأزرق" [level=3] [ref=e92]
+          - paragraph [ref=e93]: استخدام الموبايل قبل النوم بساعة يؤخّر النوم ويقلّل جودته بسبب الضوء الأزرق.
+        - generic [ref=e95]:
+          - generic [ref=e96]: 👁️
+          - heading "قاعدة 20-20-20" [level=3] [ref=e97]
+          - paragraph [ref=e98]: كل 20 دقيقة، انظر لشيء على بُعد 20 قدماً لمدة 20 ثانية لراحة عينيك.
+        - generic [ref=e100]:
+          - generic [ref=e101]: 🚶
+          - heading "صفاء الذهن" [level=3] [ref=e102]
+          - paragraph [ref=e103]: المشي بدون موبايل يقلّل التوتر والقلق بشكل ملحوظ ويحسّن التركيز والمزاج.
+        - generic [ref=e105]:
+          - generic [ref=e106]: 💬
+          - heading "علاقات أعمق" [level=3] [ref=e107]
+          - paragraph [ref=e108]: إبعاد الهاتف وقت اللقاءات العائلية يرفع جودة الحوار والترابط بشكل كبير.
+    - generic [ref=e110]:
+      - generic [ref=e112]:
+        - generic [ref=e113]: 🧪 اختبر نفسك
+        - heading "هل أنت مدمن شاشة؟" [level=2] [ref=e114]
+        - paragraph [ref=e115]: 6 أسئلة سريعة وصريحة. جاوب بصدق، والنتيجة تفضل بينك وبين نفسك.
+      - generic [ref=e119]:
+        - paragraph [ref=e120]: سؤال 1 من 6
+        - heading "أول حاجة بتعملها أول ما تصحى من النوم؟" [level=3] [ref=e121]
+        - generic [ref=e122]:
+          - button "أمسك الموبايل فوراً" [ref=e123] [cursor=pointer]
+          - button "بعد شوية" [ref=e124] [cursor=pointer]
+          - button "مش قبل ما أفطر أو أتمشى" [ref=e125] [cursor=pointer]
+    - generic [ref=e127]:
+      - generic [ref=e129]:
+        - generic [ref=e130]: 🔥 تحدي الـ7 أيام
+        - heading "غيّر عادتك في أسبوع" [level=2] [ref=e131]
+        - paragraph [ref=e132]: خطوة صغيرة كل يوم. علّم على كل تحدي تخلّصه — التقدّم بيتحفظ على جهازك.
+      - generic [ref=e133]:
+        - generic [ref=e135]:
+          - generic [ref=e136]: 0%
+          - paragraph [ref=e139]: خلّصت 0 من 7 أيام
+        - generic [ref=e140]:
+          - 'button "1 اليوم 1: صباح بدون شاشة أول 30 دقيقة بعد ما تصحى من غير موبايل خالص." [ref=e142] [cursor=pointer]':
+            - generic [ref=e143]: "1"
+            - generic [ref=e144]:
+              - 'heading "اليوم 1: صباح بدون شاشة" [level=4] [ref=e145]'
+              - paragraph [ref=e146]: أول 30 دقيقة بعد ما تصحى من غير موبايل خالص.
+          - 'button "2 اليوم 2: أغلق الإشعارات اقفل إشعارات التطبيقات اللي مش ضرورية النهارده." [ref=e148] [cursor=pointer]':
+            - generic [ref=e149]: "2"
+            - generic [ref=e150]:
+              - 'heading "اليوم 2: أغلق الإشعارات" [level=4] [ref=e151]'
+              - paragraph [ref=e152]: اقفل إشعارات التطبيقات اللي مش ضرورية النهارده.
+          - 'button "3 اليوم 3: ساعة بدون موبايل اختار ساعة في يومك تبعّد فيها الموبايل تماماً." [ref=e154] [cursor=pointer]':
+            - generic [ref=e155]: "3"
+            - generic [ref=e156]:
+              - 'heading "اليوم 3: ساعة بدون موبايل" [level=4] [ref=e157]'
+              - paragraph [ref=e158]: اختار ساعة في يومك تبعّد فيها الموبايل تماماً.
+          - 'button "4 اليوم 4: وجبة بدون شاشة كل وجبة واحدة على الأقل من غير ما تبص على أي شاشة." [ref=e160] [cursor=pointer]':
+            - generic [ref=e161]: "4"
+            - generic [ref=e162]:
+              - 'heading "اليوم 4: وجبة بدون شاشة" [level=4] [ref=e163]'
+              - paragraph [ref=e164]: كل وجبة واحدة على الأقل من غير ما تبص على أي شاشة.
+          - 'button "5 اليوم 5: تمشية صافية اتمشى 20 دقيقة والموبايل في جيبك من غير ما تفتحه." [ref=e166] [cursor=pointer]':
+            - generic [ref=e167]: "5"
+            - generic [ref=e168]:
+              - 'heading "اليوم 5: تمشية صافية" [level=4] [ref=e169]'
+              - paragraph [ref=e170]: اتمشى 20 دقيقة والموبايل في جيبك من غير ما تفتحه.
+          - 'button "6 اليوم 6: نوم هادئ ابعّد الموبايل عن سريرك قبل النوم بساعة." [ref=e172] [cursor=pointer]':
+            - generic [ref=e173]: "6"
+            - generic [ref=e174]:
+              - 'heading "اليوم 6: نوم هادئ" [level=4] [ref=e175]'
+              - paragraph [ref=e176]: ابعّد الموبايل عن سريرك قبل النوم بساعة.
+          - 'button "7 اليوم 7: يوم متوازن اجمع كل العادات الحلوة في يوم واحد متوازن — وشاركنا إحساسك!" [ref=e178] [cursor=pointer]':
+            - generic [ref=e179]: "7"
+            - generic [ref=e180]:
+              - 'heading "اليوم 7: يوم متوازن" [level=4] [ref=e181]'
+              - paragraph [ref=e182]: اجمع كل العادات الحلوة في يوم واحد متوازن — وشاركنا إحساسك!
+    - generic [ref=e184]:
+      - generic [ref=e186]:
+        - generic [ref=e187]: 📅 نظّم يومك
+        - heading "منظّم اليوم" [level=2] [ref=e188]
+        - paragraph [ref=e189]: املأ يومك بحاجات تستاهل وقتك. الجدول بيتحفظ على جهازك تلقائياً.
+      - generic [ref=e190]:
+        - generic [ref=e192]:
+          - generic [ref=e193]: رياضة 🏃
+          - generic [ref=e194]: مذاكرة 📚
+          - generic [ref=e195]: صلاة 🕌
+          - generic [ref=e196]: قراءة 📖
+          - generic [ref=e197]: وقت عائلي 👨‍👩‍👧
+          - generic [ref=e198]: تمشية 🚶
+          - generic [ref=e199]: هواية 🎨
+          - generic [ref=e200]: نوم 😴
+        - generic [ref=e202]:
+          - generic [ref=e203]:
+            - generic [ref=e204]:
+              - generic [ref=e205]: 06:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e206]
+            - generic [ref=e207]:
+              - generic [ref=e208]: 07:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e209]
+            - generic [ref=e210]:
+              - generic [ref=e211]: 08:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e212]
+            - generic [ref=e213]:
+              - generic [ref=e214]: 09:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e215]
+            - generic [ref=e216]:
+              - generic [ref=e217]: 10:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e218]
+            - generic [ref=e219]:
+              - generic [ref=e220]: 11:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e221]
+            - generic [ref=e222]:
+              - generic [ref=e223]: 12:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e224]
+            - generic [ref=e225]:
+              - generic [ref=e226]: 13:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e227]
+            - generic [ref=e228]:
+              - generic [ref=e229]: 14:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e230]
+            - generic [ref=e231]:
+              - generic [ref=e232]: 15:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e233]
+            - generic [ref=e234]:
+              - generic [ref=e235]: 16:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e236]
+            - generic [ref=e237]:
+              - generic [ref=e238]: 17:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e239]
+            - generic [ref=e240]:
+              - generic [ref=e241]: 18:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e242]
+            - generic [ref=e243]:
+              - generic [ref=e244]: 19:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e245]
+            - generic [ref=e246]:
+              - generic [ref=e247]: 20:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e248]
+            - generic [ref=e249]:
+              - generic [ref=e250]: 21:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e251]
+            - generic [ref=e252]:
+              - generic [ref=e253]: 22:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e254]
+            - generic [ref=e255]:
+              - generic [ref=e256]: 23:00
+              - textbox "هتعمل إيه في الساعة دي؟" [ref=e257]
+          - generic [ref=e258]:
+            - paragraph [ref=e259]: "خانات مملوءة: 0"
+            - button "مسح الكل" [ref=e260] [cursor=pointer]
+    - generic [ref=e262]:
+      - generic [ref=e264]:
+        - generic [ref=e265]: 💬 صوت المجتمع
+        - heading "نصايح من ناس زيك" [level=2] [ref=e266]
+        - paragraph [ref=e267]: شارك حاجة ساعدتك تقلّل استخدام الموبايل — ممكن تكون سبب في تغيير حياة حد تاني.
+      - generic [ref=e268]:
+        - generic [ref=e270]:
+          - heading "شارك نصيحتك ✍️" [level=3] [ref=e271]
+          - textbox "اكتب نصيحتك هنا..." [ref=e272]
+          - textbox "اسمك" [ref=e273]
+          - button "انشر النصيحة ✦" [ref=e274] [cursor=pointer]
+          - paragraph [ref=e275]: نصيحتك بتظهر للجميع — اكتب حاجة مفيدة ومحترمة 🙏
+        - generic [ref=e277]: جارٍ التحميل...
+    - generic [ref=e279]:
+      - generic [ref=e281]:
+        - generic [ref=e282]: 🌟 قصص نجاح
+        - heading "حصلت معاهم.. تقدر تحصل معاك" [level=2] [ref=e283]
+        - paragraph [ref=e284]: ناس بدأت خطوة صغيرة، وغيّرت علاقتها بالموبايل فعلاً.
+      - generic [ref=e285]:
+        - generic [ref=e287]:
+          - generic [ref=e288]: ”
+          - paragraph [ref=e289]: كنت بقضي 8 ساعات يومياً على الموبايل. بدأت بتحدي الـ7 أيام، ودلوقتي نزّلت لـ3 ساعات ورجّعت هواية الرسم اللي كنت سايبها.
+          - generic [ref=e290]:
+            - paragraph [ref=e291]: كريم — 19 سنة
+            - generic [ref=e292]: طالب جامعي
+        - generic [ref=e294]:
+          - generic [ref=e295]: ”
+          - paragraph [ref=e296]: أصعب حاجة كانت الصبح. أول ما بطّلت أمسك الموبايل أول ما أصحى، نومي اتحسّن وتركيزي في المذاكرة بقى أحسن بكتير.
+          - generic [ref=e297]:
+            - paragraph [ref=e298]: نورهان — 22 سنة
+            - generic [ref=e299]: متطوعة بالمبادرة
+        - generic [ref=e301]:
+          - generic [ref=e302]: ”
+          - paragraph [ref=e303]: طبّقنا فكرة (يوم بدون شاشة) في البيت مرة في الأسبوع. الأولاد في الأول اتضايقوا، دلوقتي بيستنوا اليوم ده عشان نقعد مع بعض.
+          - generic [ref=e304]:
+            - paragraph [ref=e305]: أبو يوسف — ولي أمر
+            - generic [ref=e306]: عائلة
+    - generic [ref=e308]:
+      - generic [ref=e310]:
+        - generic [ref=e311]: 🤝 انضم لينا
+        - heading "اتطوّع معانا" [level=2] [ref=e312]
+        - paragraph [ref=e313]: فريق رجّع وقتك بيكبر بناس مؤمنة بالرسالة. سجّل بياناتك وهنتواصل معاك.
+      - generic [ref=e316]:
+        - generic [ref=e317]:
+          - generic [ref=e318]:
+            - generic [ref=e319]: الاسم *
+            - textbox "اسمك" [ref=e320]
+          - generic [ref=e321]:
+            - generic [ref=e322]: رقم التواصل *
+            - textbox "01xxxxxxxxx" [ref=e323]
+        - generic [ref=e324]:
+          - generic [ref=e325]: المدينة
+          - textbox "مدينتك" [ref=e326]
+        - generic [ref=e327]:
+          - generic [ref=e328]: بتحب تساعد في إيه؟
+          - combobox [ref=e329]:
+            - option "تنظيم الورش" [selected]
+            - option "تصميم ومحتوى"
+            - option "سوشيال ميديا"
+            - option "تطوّع ميداني"
+            - option "أي حاجة تنفع"
+        - generic [ref=e330]:
+          - generic [ref=e331]: رسالة (اختياري)
+          - textbox "عايز تقولنا حاجة؟" [ref=e332]
+        - button "سجّل كمتطوّع 🤝" [ref=e333] [cursor=pointer]
+    - generic [ref=e337]:
+      - generic [ref=e338]: ❤️
+      - heading "ادعم المبادرة" [level=2] [ref=e339]
+      - paragraph [ref=e340]: كل جنيه بيساعدنا نوصل الرسالة لمدرسة ومركز شباب جديد، ونجهّز ورش توعية لشباب أكتر. تبرّعك بيرجّع لناس كتير وقتهم وحياتهم.
+      - paragraph [ref=e341]: تبرّع عبر فودافون كاش
+      - button "01005153116" [ref=e342] [cursor=pointer]
+      - paragraph [ref=e343]: اضغط على الرقم لنسخه 📋
+    - generic [ref=e345]:
+      - generic [ref=e347]:
+        - generic [ref=e348]: 📞 تواصل معانا
+        - heading "قرّبنا منك" [level=2] [ref=e349]
+        - paragraph [ref=e350]: تابعنا على السوشيال ميديا، أو كلّمنا مباشرة للتطوّع والاستفسار.
+      - generic [ref=e351]:
+        - generic [ref=e353]:
+          - heading "🔗 صفحات المبادرة" [level=3] [ref=e354]
+          - generic [ref=e355]:
+            - link "واتساب" [ref=e356] [cursor=pointer]:
+              - /url: https://wa.me/201026319025
+              - img [ref=e357]
+              - generic [ref=e359]: واتساب
+            - link "إنستجرام" [ref=e360] [cursor=pointer]:
+              - /url: https://www.instagram.com/rag3_waktk?igsh=YjNza3A1cTY4M2cz
+              - img [ref=e361]
+              - generic [ref=e363]: إنستجرام
+            - link "تيليجرام" [ref=e364] [cursor=pointer]:
+              - /url: https://t.me/rag3waktk
+              - img [ref=e365]
+              - generic [ref=e367]: تيليجرام
+            - link "تيك توك" [ref=e368] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@user7105491487951?_r=1&_t=ZS-95paa8RFSA0
+              - img [ref=e369]
+              - generic [ref=e371]: تيك توك
+            - link "فيسبوك" [ref=e372] [cursor=pointer]:
+              - /url: https://www.facebook.com/share/18RcozLb5u/
+              - img [ref=e373]
+              - generic [ref=e375]: فيسبوك
+        - generic [ref=e377]:
+          - generic [ref=e378]: 📞
+          - paragraph [ref=e379]: للتواصل والانضمام لفريق المبادرة
+          - button "01026319025" [ref=e380] [cursor=pointer]
+          - paragraph [ref=e381]: اضغط لنسخ الرقم · متاحين على واتساب
+  - contentinfo [ref=e382]:
+    - generic [ref=e383]:
+      - img "رجّع وقتك" [ref=e384]
+      - generic [ref=e385]: رجّع وقتك
+      - paragraph [ref=e386]: مبادرة مجتمعية من أجل حياة أفضل بعيداً عن الشاشات — الموبايل مش حياتك.. حياتك بره الشاشة.
+      - paragraph [ref=e387]: © 2026 مبادرة رجّع وقتك — كل الحقوق محفوظة

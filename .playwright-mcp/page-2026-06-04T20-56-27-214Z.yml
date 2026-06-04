@@ -1,0 +1,110 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - link "رجّع وقتك رجّع وقتك" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "رجّع وقتك" [ref=e7]
+        - generic [ref=e8]: رجّع وقتك
+      - generic [ref=e9]:
+        - link "الرئيسية" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "عن المبادرة" [ref=e11] [cursor=pointer]:
+          - /url: /about
+        - link "اعرف واتحدى" [ref=e12] [cursor=pointer]:
+          - /url: /awareness
+        - link "نصايح المجتمع" [ref=e13] [cursor=pointer]:
+          - /url: /advices
+        - link "تطوّع" [ref=e14] [cursor=pointer]:
+          - /url: /volunteer
+        - link "تواصل" [ref=e15] [cursor=pointer]:
+          - /url: /contact
+      - link "ادعمنا" [ref=e17] [cursor=pointer]:
+        - /url: /donate
+        - img [ref=e18]
+        - text: ادعمنا
+  - main [ref=e20]:
+    - generic [ref=e22]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - img [ref=e26]
+          - text: صوت المجتمع
+        - heading "نصايح من ناس زيّك" [level=2] [ref=e28]
+        - paragraph [ref=e29]: شارك حاجة ساعدتك تقلّل استخدام الموبايل — ممكن تكون سبب في تغيير حياة حد تاني.
+      - generic [ref=e30]:
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - img [ref=e35]
+            - heading "شارك نصيحتك" [level=3] [ref=e38]
+          - textbox "اكتب نصيحتك هنا..." [ref=e39]
+          - textbox "اسمك" [ref=e40]
+          - button "انشر النصيحة" [ref=e41] [cursor=pointer]
+          - paragraph [ref=e42]: نصيحتك بتظهر للجميع — اكتب حاجة مفيدة ومحترمة 🙏
+        - generic [ref=e44]: جارٍ التحميل...
+    - generic [ref=e46]:
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - img [ref=e50]
+          - text: قصص نجاح
+        - heading "حصلت معاهم.. تقدر تحصل معاك" [level=2] [ref=e52]
+        - paragraph [ref=e53]: ناس بدأت خطوة صغيرة، وغيّرت علاقتها بالموبايل فعلاً.
+      - generic [ref=e54]:
+        - generic [ref=e56]:
+          - img [ref=e58]
+          - paragraph [ref=e60]: كنت بقضي 8 ساعات يومياً على الموبايل. بدأت بتحدي الـ7 أيام، ودلوقتي نزّلت لـ3 ساعات ورجّعت هواية الرسم اللي كنت سايبها.
+          - generic [ref=e61]:
+            - paragraph [ref=e62]: كريم — 19 سنة
+            - generic [ref=e63]: طالب جامعي
+        - generic [ref=e65]:
+          - img [ref=e67]
+          - paragraph [ref=e69]: أصعب حاجة كانت الصبح. أول ما بطّلت أمسك الموبايل أول ما أصحى، نومي اتحسّن وتركيزي في المذاكرة بقى أحسن بكتير.
+          - generic [ref=e70]:
+            - paragraph [ref=e71]: نورهان — 22 سنة
+            - generic [ref=e72]: متطوعة بالمبادرة
+        - generic [ref=e74]:
+          - img [ref=e76]
+          - paragraph [ref=e78]: طبّقنا فكرة (يوم بدون شاشة) في البيت مرة في الأسبوع. الأولاد في الأول اتضايقوا، دلوقتي بيستنوا اليوم ده عشان نقعد مع بعض.
+          - generic [ref=e79]:
+            - paragraph [ref=e80]: أبو يوسف — ولي أمر
+            - generic [ref=e81]: عائلة
+  - contentinfo [ref=e82]:
+    - generic [ref=e83]:
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - img "رجّع وقتك" [ref=e87]
+          - generic [ref=e88]: رجّع وقتك
+        - paragraph [ref=e89]: مبادرة مجتمعية من أجل حياة أفضل بعيداً عن الشاشات — الموبايل مش حياتك.. حياتك بره الشاشة.
+      - generic [ref=e90]:
+        - heading "روابط سريعة" [level=4] [ref=e91]
+        - list [ref=e92]:
+          - listitem [ref=e93]:
+            - link "عن المبادرة" [ref=e94] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e95]:
+            - link "اعرف واتحدى" [ref=e96] [cursor=pointer]:
+              - /url: /awareness
+          - listitem [ref=e97]:
+            - link "نصايح المجتمع" [ref=e98] [cursor=pointer]:
+              - /url: /advices
+          - listitem [ref=e99]:
+            - link "تطوّع معانا" [ref=e100] [cursor=pointer]:
+              - /url: /volunteer
+          - listitem [ref=e101]:
+            - link "ادعم المبادرة" [ref=e102] [cursor=pointer]:
+              - /url: /donate
+          - listitem [ref=e103]:
+            - link "تواصل" [ref=e104] [cursor=pointer]:
+              - /url: /contact
+      - generic [ref=e105]:
+        - heading "تابعنا" [level=4] [ref=e106]
+        - generic [ref=e107]:
+          - link "واتساب" [ref=e108] [cursor=pointer]:
+            - /url: https://wa.me/201026319025
+          - link "إنستجرام" [ref=e109] [cursor=pointer]:
+            - /url: https://www.instagram.com/rag3_waktk?igsh=YjNza3A1cTY4M2cz
+          - link "تيليجرام" [ref=e110] [cursor=pointer]:
+            - /url: https://t.me/rag3waktk
+          - link "تيك توك" [ref=e111] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@user7105491487951?_r=1&_t=ZS-95paa8RFSA0
+          - link "فيسبوك" [ref=e112] [cursor=pointer]:
+            - /url: https://www.facebook.com/share/18RcozLb5u/
+    - generic [ref=e114]: © 2026 مبادرة رجّع وقتك — كل الحقوق محفوظة

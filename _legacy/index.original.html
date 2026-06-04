@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رجّع وقتك | حياتك بره الشاشة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #f59e0b;
+            --gold-light: #fcd34d;
+            --gold-dark: #d97706;
+            --bg: #080f1e;
+            --surface: #0f1d35;
+            --card: rgba(15, 29, 53, 0.85);
+            --border: rgba(245, 158, 11, 0.18);
+            --text: #f0f4ff;
+            --muted: rgba(240, 244, 255, 0.55);
+            --danger: #ef4444;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 50% 0%, rgba(245,158,11,0.07) 0%, transparent 60%),
+                radial-gradient(ellipse 50% 50% at 80% 80%, rgba(245,158,11,0.04) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .wrapper {
+            position: relative;
+            z-index: 1;
+            max-width: 620px;
+            margin: 0 auto;
+            padding: 0 16px 80px;
+        }
+
+        /* =================== HEADER =================== */
+        .site-header {
+            text-align: center;
+            padding: 50px 0 30px;
+        }
+
+        .site-logo {
+            width: 160px;
+            height: 160px;
+            object-fit: contain;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 18px rgba(245,158,11,0.35));
+            animation: floatLogo 4s ease-in-out infinite;
+        }
+
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0); filter: drop-shadow(0 0 18px rgba(245,158,11,0.35)); }
+            50% { transform: translateY(-6px); filter: drop-shadow(0 0 28px rgba(245,158,11,0.55)); }
+        }
+
+        .site-header h1 { display: none; }
+
+        .site-header p {
+            color: var(--muted);
+            font-size: 1rem;
+            font-weight: 300;
+            letter-spacing: 0.03em;
+        }
+
+        .divider {
+            width: 60px; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 16px auto;
+        }
+
+        /* =================== STATS BAR =================== */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 14px 10px;
+            text-align: center;
+            backdrop-filter: blur(12px);
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover { transform: translateY(-2px); }
+
+        .stat-num {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.72rem;
+            color: var(--muted);
+            margin-top: 4px;
+            font-weight: 400;
+        }
+
+        /* =================== PAGES =================== */
+        .page { display: none; }
+        .page.active { display: block; animation: fadeUp 0.35s cubic-bezier(0.23,1,0.32,1); }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(18px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* =================== MAIN MENU =================== */
+        .main-menu { display: flex; flex-direction: column; gap: 14px; }
+
+        .menu-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 22px 24px;
+            cursor: pointer;
+            transition: all 0.28s ease;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            backdrop-filter: blur(12px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(245,158,11,0.06) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .menu-card:hover::after { opacity: 1; }
+        .menu-card:hover {
+            border-color: rgba(245,158,11,0.5);
+            transform: translateX(-4px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3), 4px 0 0 var(--gold) inset;
+        }
+
+        .menu-icon {
+            width: 52px; height: 52px;
+            border-radius: 14px;
+            background: rgba(245,158,11,0.12);
+            border: 1px solid rgba(245,158,11,0.25);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .menu-text h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 3px; }
+        .menu-text p { font-size: 0.82rem; color: var(--muted); font-weight: 300; }
+
+        .menu-arrow {
+            margin-right: auto;
+            color: var(--gold);
+            font-size: 1.2rem;
+            opacity: 0.6;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .menu-card:hover .menu-arrow { opacity: 1; transform: translateX(-4px); }
+
+        /* =================== DONATE BANNER =================== */
+        .donate-banner {
+            margin-top: 18px;
+            background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(245,158,11,0.05));
+            border: 1px solid rgba(245,158,11,0.4);
+            border-radius: 20px;
+            padding: 20px 22px;
+            text-align: center;
+            backdrop-filter: blur(12px);
+        }
+
+        .donate-banner h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-bottom: 6px;
+        }
+
+        .donate-banner p {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        .donate-number {
+            display: inline-block;
+            background: var(--gold);
+            color: #000;
+            font-size: 1.25rem;
+            font-weight: 900;
+            padding: 10px 24px;
+            border-radius: 12px;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: transform 0.15s, box-shadow 0.15s;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .donate-number:hover {
+            transform: scale(1.04);
+            box-shadow: 0 6px 20px rgba(245,158,11,0.4);
+        }
+
+        .donate-small { font-size: 0.75rem; color: var(--muted); margin-top: 8px; }
+
+        /* =================== INNER PAGE HEADER =================== */
+        .page-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 24px;
+            padding: 18px 0 14px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .back-btn {
+            background: rgba(245,158,11,0.12);
+            border: 1px solid var(--border);
+            color: var(--gold);
+            width: 40px; height: 40px;
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .back-btn:hover { background: rgba(245,158,11,0.25); }
+
+        .page-title { font-size: 1.35rem; font-weight: 700; }
+        .page-icon { font-size: 1.5rem; }
+
+        /* =================== SCHEDULE =================== */
+        .schedule-list { display: flex; flex-direction: column; gap: 6px; }
+
+        .schedule-row {
+            display: flex;
+            align-items: stretch;
+            background: rgba(15, 29, 53, 0.7);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color 0.2s;
+        }
+
+        .schedule-row:focus-within {
+            border-color: rgba(245,158,11,0.4);
+        }
+
+        .time-tag {
+            background: rgba(245,158,11,0.15);
+            color: var(--gold);
+            padding: 10px 14px;
+            min-width: 60px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid rgba(245,158,11,0.2);
+        }
+
+        .schedule-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: var(--text);
+            padding: 12px 14px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.95rem;
+            outline: none;
+            direction: rtl;
+        }
+
+        .schedule-input::placeholder { color: rgba(240,244,255,0.25); }
+
+        /* =================== ADVICE =================== */
+        .advice-form { margin-bottom: 24px; }
+
+        .field-label {
+            font-size: 0.82rem;
+            color: var(--muted);
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        textarea, .text-input {
+            width: 100%;
+            background: rgba(8, 15, 30, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 14px 16px;
+            color: var(--text);
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s;
+            direction: rtl;
+        }
+
+        textarea { resize: vertical; min-height: 100px; margin-bottom: 12px; }
+        .text-input { margin-bottom: 12px; }
+
+        textarea:focus, .text-input:focus { border-color: rgba(245,158,11,0.5); }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: #000;
+            border: none;
+            padding: 14px;
+            border-radius: 14px;
+            font-weight: 800;
+            font-size: 1rem;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            transition: opacity 0.2s, transform 0.15s;
+        }
+
+        .submit-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+        .section-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin: 24px 0 12px;
+        }
+
+        .advice-card {
+            background: rgba(15, 29, 53, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 16px 18px;
+            margin-bottom: 10px;
+            position: relative;
+            border-right: 3px solid var(--gold);
+            transition: transform 0.2s;
+        }
+
+        .advice-card:hover { transform: translateX(-2px); }
+
+        .advice-text { font-size: 0.95rem; line-height: 1.7; margin-bottom: 8px; }
+        .advice-author { font-size: 0.8rem; color: var(--gold); font-weight: 600; }
+
+        .del-btn {
+            position: absolute;
+            left: 12px; top: 12px;
+            background: rgba(239,68,68,0.15);
+            color: var(--danger);
+            border: 1px solid rgba(239,68,68,0.3);
+            border-radius: 8px;
+            padding: 4px 10px;
+            cursor: pointer;
+            font-size: 0.78rem;
+            font-family: 'Cairo', sans-serif;
+            transition: background 0.2s;
+        }
+
+        .del-btn:hover { background: rgba(239,68,68,0.3); }
+
+        /* =================== INFO =================== */
+        .info-card {
+            background: rgba(15, 29, 53, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            transition: transform 0.2s;
+        }
+
+        .info-card:hover { transform: translateX(-2px); }
+
+        .info-bullet {
+            width: 36px; height: 36px;
+            background: rgba(245,158,11,0.12);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .info-text { font-size: 0.95rem; line-height: 1.65; padding-top: 6px; }
+
+        /* =================== ABOUT =================== */
+        .about-section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 26px 22px;
+            margin-top: 18px;
+            backdrop-filter: blur(12px);
+            text-align: center;
+        }
+
+        .about-badge {
+            display: inline-block;
+            background: rgba(245,158,11,0.12);
+            border: 1px solid rgba(245,158,11,0.3);
+            color: var(--gold);
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 14px;
+        }
+
+        .about-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .about-sub { font-size: 0.88rem; color: var(--muted); margin-bottom: 14px; }
+        .about-highlight { color: var(--gold-light); font-weight: 700; }
+
+        .about-desc {
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: rgba(240,244,255,0.85);
+            margin-bottom: 20px;
+        }
+
+        .about-goal {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(245,158,11,0.08);
+            border: 1px solid rgba(245,158,11,0.2);
+            border-radius: 16px;
+            padding: 16px 20px;
+            text-align: right;
+            margin-bottom: 18px;
+        }
+
+        .goal-icon { font-size: 2rem; flex-shrink: 0; }
+        .goal-num { font-size: 2.2rem; font-weight: 900; color: var(--gold); line-height: 1; }
+        .goal-label { font-size: 0.85rem; color: var(--muted); margin-top: 3px; line-height: 1.4; }
+
+        .about-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+
+        .tag {
+            background: rgba(245,158,11,0.1);
+            border: 1px solid rgba(245,158,11,0.25);
+            color: var(--gold-light);
+            font-size: 0.8rem;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+
+        /* =================== SOCIAL =================== */
+        /* ===== CONTACT BUTTONS ===== */
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 1.05rem 2.2rem;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-decoration: none;
+            font-family: 'Cairo', sans-serif;
+            cursor: pointer;
+            transition: transform 0.26s ease, box-shadow 0.26s ease, background 0.26s ease, border-color 0.26s ease, color 0.26s ease;
+        }
+
+        .contact-btn svg { width: 19px; height: 19px; flex-shrink: 0; }
+        .contact-btn:hover { transform: translateY(-3px); }
+
+        /* WhatsApp */
+        .contact-btn-wa {
+            background: linear-gradient(135deg, rgba(37,211,102,0.15), rgba(37,211,102,0.07));
+            border: 2.2px solid rgba(37,211,102,0.3);
+            color: #5fe88e;
+        }
+        .contact-btn-wa:hover {
+            background: linear-gradient(135deg, rgba(37,211,102,0.28), rgba(37,211,102,0.15));
+            border-color: rgba(37,211,102,0.75);
+            color: #25d366;
+            box-shadow: 0 8px 36px rgba(37,211,102,0.35);
+        }
+
+        /* Instagram */
+        .contact-btn-ig {
+            background: linear-gradient(135deg, rgba(225,48,108,0.12), rgba(254,220,119,0.07));
+            border: 2.2px solid rgba(225,48,108,0.28);
+            color: #f07fa8;
+        }
+        .contact-btn-ig:hover {
+            background: linear-gradient(135deg, rgba(225,48,108,0.25), rgba(254,220,119,0.12));
+            border-color: rgba(225,48,108,0.7);
+            color: #ff4d8d;
+            box-shadow: 0 8px 36px rgba(225,48,108,0.35);
+        }
+
+        /* Telegram */
+        .contact-btn-tg {
+            background: linear-gradient(135deg, rgba(0,136,204,0.15), rgba(0,136,204,0.07));
+            border: 2.2px solid rgba(0,136,204,0.35);
+            color: #5bc8f5;
+        }
+        .contact-btn-tg:hover {
+            background: linear-gradient(135deg, rgba(0,136,204,0.28), rgba(0,136,204,0.14));
+            border-color: rgba(0,136,204,0.8);
+            color: #29b6f6;
+            box-shadow: 0 8px 36px rgba(0,136,204,0.35);
+        }
+
+        /* TikTok */
+        .contact-btn-tt {
+            background: linear-gradient(135deg, rgba(180,120,255,0.12), rgba(180,120,255,0.05));
+            border: 2.2px solid rgba(180,120,255,0.30);
+            color: #c8a0ff;
+        }
+        .contact-btn-tt:hover {
+            background: linear-gradient(135deg, rgba(180,120,255,0.25), rgba(180,120,255,0.12));
+            border-color: rgba(180,120,255,0.75);
+            color: #d580ff;
+            box-shadow: 0 8px 36px rgba(180,120,255,0.35);
+        }
+
+        /* Facebook */
+        .contact-btn-fb {
+            background: linear-gradient(135deg, rgba(24,119,242,0.15), rgba(24,119,242,0.07));
+            border: 2.2px solid rgba(24,119,242,0.35);
+            color: #6aabff;
+        }
+        .contact-btn-fb:hover {
+            background: linear-gradient(135deg, rgba(24,119,242,0.28), rgba(24,119,242,0.14));
+            border-color: rgba(24,119,242,0.8);
+            color: #4d94ff;
+            box-shadow: 0 8px 36px rgba(24,119,242,0.35);
+        }
+
+        /* =================== CONTACT =================== */
+        .contact-section {
+            margin-top: 18px;
+            background: linear-gradient(135deg, rgba(15,29,53,0.9), rgba(8,15,30,0.9));
+            border: 1px solid rgba(245,158,11,0.3);
+            border-radius: 24px;
+            padding: 24px;
+            text-align: center;
+            backdrop-filter: blur(12px);
+        }
+
+        .contact-icon { font-size: 2rem; margin-bottom: 8px; }
+        .contact-label { font-size: 0.88rem; color: var(--muted); margin-bottom: 12px; }
+
+        .contact-number {
+            display: inline-block;
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--gold);
+            background: rgba(245,158,11,0.1);
+            border: 2px solid rgba(245,158,11,0.4);
+            padding: 12px 28px;
+            border-radius: 16px;
+            cursor: pointer;
+            font-family: "Tajawal", sans-serif;
+            letter-spacing: 0.04em;
+            transition: all 0.2s;
+        }
+
+        .contact-number:hover {
+            background: rgba(245,158,11,0.2);
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(245,158,11,0.25);
+        }
+
+        .contact-hint { font-size: 0.75rem; color: var(--muted); margin-top: 10px; }
+
+        /* =================== FOOTER =================== */
+        .site-footer {
+            text-align: center;
+            padding: 30px 0 10px;
+            color: var(--muted);
+            font-size: 0.78rem;
+        }
+
+        .footer-logo { font-size: 1.2rem; font-weight: 900; color: var(--gold); margin-bottom: 6px; }
+
+        /* =================== ADMIN =================== */
+        #loginPage .inner-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(12px);
+        }
+
+        .admin-trigger {
+            position: fixed;
+            bottom: 8px; left: 8px;
+            opacity: 0;
+            font-size: 9px;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 9999;
+            color: transparent;
+        }
+
+        .admin-trigger:hover { opacity: 0.3; color: var(--muted); }
+
+        /* =================== EMPTY STATE =================== */
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--muted);
+        }
+
+        .empty-state .empty-icon { font-size: 2.5rem; margin-bottom: 10px; }
+        .empty-state p { font-size: 0.9rem; }
+
+        /* =================== TOAST =================== */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 50%;
+            transform: translateX(50%) translateY(80px);
+            background: var(--gold);
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            z-index: 10000;
+            transition: transform 0.35s cubic-bezier(0.23,1,0.32,1);
+            white-space: nowrap;
+        }
+
+        .toast.show { transform: translateX(50%) translateY(0); }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- ===== HOME PAGE ===== -->
+    <div id="homePage" class="page active">
+        <header class="site-header">
+<img src="https://media.discordapp.net/attachments/1492614292086722785/1499053452465143888/IMG-20260429-WA0020.jpg?ex=69f4b752&is=69f365d2&hm=5e20ae800771912bfcc4527722b2841cfca7c129d16e5ab60ace84587c4530fd&=&format=webp&width=567&height=567" class="site-logo" alt="رجع وقتك لوجو">
+            <h1>رجّع وقتك</h1>
+            <div class="divider"></div>
+            <p>الموبايل مش حياتك.. حياتك بره الشاشة</p>
+        </header>
+
+        <div class="stats-bar">
+            <div class="stat-card">
+                <div class="stat-num">365</div>
+                <div class="stat-label">يوم في السنة</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num" id="adviceCount">0</div>
+                <div class="stat-label">نصيحة شاركها الناس</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">15</div>
+                <div class="stat-label">يوم تكسبها بساعة يومياً</div>
+            </div>
+        </div>
+
+        <div class="main-menu">
+            <div class="menu-card" onclick="showPage('schedulePage')">
+                <div class="menu-icon">📅</div>
+                <div class="menu-text">
+                    <h3>جدول يومي</h3>
+                    <p>نظّم وقتك ساعة بساعة</p>
+                </div>
+                <div class="menu-arrow">←</div>
+            </div>
+
+            <div class="menu-card" onclick="showPage('myAdvicePage')">
+                <div class="menu-icon">✍️</div>
+                <div class="menu-text">
+                    <h3>نصايحي</h3>
+                    <p>شارك تجربتك مع الآخرين</p>
+                </div>
+                <div class="menu-arrow">←</div>
+            </div>
+
+            <div class="menu-card" onclick="showPage('infoPage')">
+                <div class="menu-icon">💡</div>
+                <div class="menu-text">
+                    <h3>معلومة تفيدني</h3>
+                    <p>حقائق عن تأثير الشاشات</p>
+                </div>
+                <div class="menu-arrow">←</div>
+            </div>
+        </div>
+
+        <!-- ABOUT SECTION -->
+        <div class="about-section">
+            <div class="about-badge">🎯 عن المبادرة</div>
+            <h2 class="about-title">رجّع وقتك</h2>
+            <p class="about-sub">تحت شعار: <span class="about-highlight">«الموبايل مش حياتك.. حياتك بره الشاشة»</span></p>
+            <p class="about-desc">مبادرة مجتمعية تهدف إلى توعية النشء بمخاطر الإدمان الرقمي، من خلال برامج تفاعلية في مراكز الشباب والمدارس.</p>
+            <div class="about-goal">
+                <div class="goal-icon">🎯</div>
+                <div>
+                    <div class="goal-num">+300</div>
+                    <div class="goal-label">شاب وفتاة نستهدف توعيتهم بمخاطر الإدمان الرقمي</div>
+                </div>
+            </div>
+            <div class="about-tags">
+                <span class="tag">مراكز الشباب</span>
+                <span class="tag">المدارس</span>
+                <span class="tag">توعية رقمية</span>
+                <span class="tag">صحة نفسية</span>
+            </div>
+        </div>
+
+        <!-- DONATE BANNER -->
+        <div class="donate-banner">
+            <h3>ادعم المبادرة</h3>
+            <p>بتبرعك بتساعد في نشر الوعي وتوصيل الرسالة لأكبر عدد ممكن</p>
+            <div class="donate-number" onclick="copyNumber('01005153116')">01005153116</div>
+            <div class="donate-small">اضغط على الرقم لنسخه</div>
+        </div>
+
+        <!-- SOCIAL LINKS SECTION -->
+        <div class="social-section">
+            <div class="social-header">
+                <span>🔗</span>
+                <span>صفحات المبادرة</span>
+            </div>
+            <div class="contact-links">
+
+                <a href="https://wa.me/201026319025" target="_blank" class="contact-btn contact-btn-wa">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    واتساب
+                </a>
+
+                <a href="https://www.instagram.com/rag3_waktk?igsh=YjNza3A1cTY4M2cz" target="_blank" class="contact-btn contact-btn-ig">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    إنستجرام
+                </a>
+
+                <a href="https://t.me/rag3waktk" target="_blank" class="contact-btn contact-btn-tg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    تيليجرام
+                </a>
+
+                <a href="https://www.tiktok.com/@user7105491487951?_r=1&_t=ZS-95paa8RFSA0" target="_blank" class="contact-btn contact-btn-tt">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.75a8.16 8.16 0 0 0 4.77 1.52V6.82a4.85 4.85 0 0 1-1-.13z"/></svg>
+                    تيك توك
+                </a>
+
+                <a href="https://www.facebook.com/share/18RcozLb5u/" target="_blank" class="contact-btn contact-btn-fb">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    فيسبوك
+                </a>
+
+            </div>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <div class="contact-section">
+            <div class="contact-icon">📞</div>
+            <div class="contact-label">رقم التواصل والتطوع في المبادرة</div>
+            <div class="contact-number" onclick="copyNumber('01026319025')">01026319025</div>
+            <div class="contact-hint">اضغط لنسخ الرقم · للتواصل والانضمام للفريق</div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="footer-logo">رجّع وقتك</div>
+            <p>مبادرة مجتمعية من أجل حياة أفضل بعيداً عن الشاشات</p>
+            <p style="margin-top:6px; font-size:0.72rem;"> </p>
+        </footer>
+    </div>
+
+    <!-- ===== SCHEDULE PAGE ===== -->
+    <div id="schedulePage" class="page">
+        <div class="page-header">
+            <div class="back-btn" onclick="showPage('homePage')">→</div>
+            <span class="page-icon">📅</span>
+            <div class="page-title">جدولك اليومي</div>
+        </div>
+        <div class="schedule-list" id="scheduleContainer"></div>
+    </div>
+
+    <!-- ===== MY ADVICE PAGE ===== -->
+    <div id="myAdvicePage" class="page">
+        <div class="page-header">
+            <div class="back-btn" onclick="showPage('homePage')">→</div>
+            <span class="page-icon">✍️</span>
+            <div class="page-title">شارك نصيحة</div>
+        </div>
+
+        <div class="advice-form">
+            <div class="field-label">نصيحتك لتقليل استخدام الموبايل</div>
+            <textarea id="advInput" placeholder="اكتب نصيحتك هنا..."></textarea>
+            <div class="field-label">اسمك</div>
+            <input class="text-input" id="nameInput" type="text" placeholder="اسمك">
+            <button class="submit-btn" onclick="saveAdvice()">نشر النصيحة ✦</button>
+        </div>
+
+        <div class="section-title">نصائح المجتمع</div>
+        <div id="adviceDisplay"></div>
+    </div>
+
+    <!-- ===== INFO PAGE ===== -->
+    <div id="infoPage" class="page">
+        <div class="page-header">
+            <div class="back-btn" onclick="showPage('homePage')">→</div>
+            <span class="page-icon">💡</span>
+            <div class="page-title">معلومات تهمك</div>
+        </div>
+
+        <div class="info-card">
+            <div class="info-bullet">⏱️</div>
+            <div class="info-text">تقليل ساعة واحدة من هاتفك يومياً توفر لك <strong style="color:var(--gold)">15 يوماً كاملاً</strong> في السنة!</div>
+        </div>
+        <div class="info-card">
+            <div class="info-bullet">👁️</div>
+            <div class="info-text">جرب قاعدة <strong style="color:var(--gold)">20-20-20</strong>: كل 20 دقيقة، انظر لشيء على بُعد 20 قدماً لمدة 20 ثانية لراحة عينك.</div>
+        </div>
+        <div class="info-card">
+            <div class="info-bullet">🚶</div>
+            <div class="info-text">المشي بدون موبايل يقلل <strong style="color:var(--gold)">التوتر والقلق</strong> بشكل ملحوظ ويحسن التركيز.</div>
+        </div>
+        <div class="info-card">
+            <div class="info-bullet">🌙</div>
+            <div class="info-text">استخدام الموبايل قبل النوم بساعة يؤخر النوم ويقلل جودته بسبب <strong style="color:var(--gold)">الضوء الأزرق</strong>.</div>
+        </div>
+        <div class="info-card">
+            <div class="info-bullet">🧠</div>
+            <div class="info-text">متوسط الإنسان يتحقق من هاتفه <strong style="color:var(--gold)">96 مرة يومياً</strong> — أي مرة كل 10 دقائق!</div>
+        </div>
+
+        <div class="section-title">نصائح من المجتمع</div>
+        <div id="publicAdvices"></div>
+    </div>
+
+    <!-- ===== LOGIN PAGE ===== -->
+    <div id="loginPage" class="page">
+        <div class="page-header">
+            <div class="back-btn" onclick="showPage('homePage')">→</div>
+            <span class="page-icon">🔐</span>
+            <div class="page-title">دخول الإدارة</div>
+        </div>
+        <div class="inner-card">
+            <div class="field-label">اسم المستخدم</div>
+            <input class="text-input" id="adminUser" type="text" placeholder="أدمن">
+            <div class="field-label" style="margin-top:10px">كلمة السر</div>
+            <input class="text-input" id="adminPass" type="password" placeholder="••••">
+            <button class="submit-btn" style="margin-top:14px" onclick="adminLogin()">دخول</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- Admin trigger (invisible) -->
+<div class="admin-trigger" onclick="showPage('loginPage')">⚙</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+    let isAdmin = false;
+
+    // ===== BUILD SCHEDULE ON PAGE LOAD =====
+    function buildSchedule() {
+        const schedCont = document.getElementById('scheduleContainer');
+        if (!schedCont || schedCont.children.length > 0) return;
+        for (let i = 0; i < 24; i++) {
+            const time = String(i).padStart(2, '0') + ':00';
+            const saved = localStorage.getItem('task_' + i) || '';
+            const row = document.createElement('div');
+            row.className = 'schedule-row';
+            row.innerHTML = `
+                <div class="time-tag">${time}</div>
+                <input class="schedule-input"
+                       value="${saved.replace(/"/g, '&quot;')}"
+                       placeholder="ماذا ستفعل هنا..."
+                       oninput="localStorage.setItem('task_${i}', this.value)">
+            `;
+            schedCont.appendChild(row);
+        }
+    }
+
+    // ===== NAVIGATION =====
+    function showPage(id) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        const target = document.getElementById(id);
+        if (target) {
+            target.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ✅ FIX: render content AFTER the page is visible
+        if (id === 'schedulePage') {
+            buildSchedule();
+        }
+        if (id === 'myAdvicePage' || id === 'infoPage') {
+            // Small delay so DOM elements are definitely rendered
+            setTimeout(renderAdvices, 10);
+        }
+        if (id === 'homePage') {
+            updateCount();
+        }
+    }
+
+    // ===== TOAST =====
+    function showToast(msg) {
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2800);
+    }
+
+    // ===== COPY NUMBER =====
+    function copyNumber(num) {
+        navigator.clipboard.writeText(num).then(() => {
+            showToast('✓ تم نسخ الرقم: ' + num);
+        }).catch(() => {
+            showToast('الرقم: ' + num);
+        });
+    }
+
+    // ===== ADVICE SYSTEM =====
+    function saveAdvice() {
+        const text = document.getElementById('advInput').value.trim();
+        const name = document.getElementById('nameInput').value.trim();
+        if (!text || !name) {
+            showToast('⚠ برجاء إدخال النصيحة واسمك');
+            return;
+        }
+
+        let advices = JSON.parse(localStorage.getItem('advices') || '[]');
+        advices.push({ text, name, id: Date.now() });
+        localStorage.setItem('advices', JSON.stringify(advices));
+
+        document.getElementById('advInput').value = '';
+        document.getElementById('nameInput').value = '';
+        showToast('✓ تم نشر نصيحتك بنجاح!');
+        renderAdvices();
+        updateCount();
+    }
+
+    function renderAdvices() {
+        const myDisplay = document.getElementById('adviceDisplay');
+        const publicDisplay = document.getElementById('publicAdvices');
+        const advices = JSON.parse(localStorage.getItem('advices') || '[]');
+        const reversed = [...advices].reverse();
+
+        const makeCard = (a) => `
+            <div class="advice-card">
+                ${isAdmin ? `<button class="del-btn" onclick="deleteAdv(${a.id})">حذف 🗑</button>` : ''}
+                <div class="advice-text">"${a.text}"</div>
+                <div class="advice-author">بواسطة: ${a.name}</div>
+            </div>
+        `;
+
+        const emptyHTML = `
+            <div class="empty-state">
+                <div class="empty-icon">💬</div>
+                <p>لا توجد نصائح بعد. كن أول من يشارك!</p>
+            </div>
+        `;
+
+        if (myDisplay) {
+            myDisplay.innerHTML = reversed.length ? reversed.map(makeCard).join('') : emptyHTML;
+        }
+        if (publicDisplay) {
+            publicDisplay.innerHTML = reversed.length ? reversed.map(makeCard).join('') : emptyHTML;
+        }
+    }
+
+    function deleteAdv(id) {
+        if (!confirm('هل تريد حذف هذه النصيحة؟')) return;
+        let advices = JSON.parse(localStorage.getItem('advices') || '[]');
+        advices = advices.filter(a => a.id !== id);
+        localStorage.setItem('advices', JSON.stringify(advices));
+        renderAdvices();
+        updateCount();
+        showToast('تم الحذف');
+    }
+
+    // ===== ADMIN =====
+    function adminLogin() {
+        const u = document.getElementById('adminUser').value;
+        const p = document.getElementById('adminPass').value;
+        if (u === 'admin' && p === '1234') {
+            isAdmin = true;
+            showToast('✓ مرحباً أيها المدير!');
+            showPage('homePage');
+        } else {
+            showToast('⚠ بيانات الدخول غير صحيحة');
+        }
+    }
+
+    // ===== COUNT =====
+    function updateCount() {
+        const advices = JSON.parse(localStorage.getItem('advices') || '[]');
+        const el = document.getElementById('adviceCount');
+        if (el) el.textContent = advices.length;
+    }
+
+    // ===== INIT =====
+    updateCount();
+</script>
+</body>
+</html>
