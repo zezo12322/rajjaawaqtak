@@ -1,0 +1,178 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - link "رجّع وقتك رجّع وقتك" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "رجّع وقتك" [ref=e7]
+        - generic [ref=e8]: رجّع وقتك
+      - generic [ref=e9]:
+        - link "الرئيسية" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "عن المبادرة" [ref=e11] [cursor=pointer]:
+          - /url: /about
+        - link "اعرف واتحدى" [ref=e12] [cursor=pointer]:
+          - /url: /awareness
+        - link "نصايح المجتمع" [ref=e13] [cursor=pointer]:
+          - /url: /advices
+        - link "تطوّع" [ref=e14] [cursor=pointer]:
+          - /url: /volunteer
+        - link "تواصل" [ref=e15] [cursor=pointer]:
+          - /url: /contact
+      - link "اتطوّع معانا" [ref=e17] [cursor=pointer]:
+        - /url: /volunteer
+        - img [ref=e18]
+        - text: اتطوّع معانا
+  - main [ref=e23]:
+    - generic [ref=e24]:
+      - generic:
+        - generic:
+          - img "Background Paths"
+        - generic:
+          - img "Background Paths"
+      - generic [ref=e26]:
+        - img "رجّع وقتك" [ref=e29]
+        - generic [ref=e30]:
+          - img [ref=e31]
+          - text: مبادرة مجتمعية للتوعية الرقمية
+        - heading "رجّع وقتك" [level=1] [ref=e34]
+        - paragraph [ref=e35]: الموبايل مش حياتك.. حياتك بره الشاشة
+        - paragraph [ref=e36]: بنساعد الشباب يرجّعوا السيطرة على وقتهم وحياتهم بعيداً عن إدمان الشاشات — بالوعي، والتحدي، والتجربة الحقيقية.
+        - generic [ref=e37]:
+          - link "ابدأ — اختبر نفسك" [ref=e38] [cursor=pointer]:
+            - /url: /awareness
+            - img [ref=e39]
+            - text: ابدأ — اختبر نفسك
+          - link "اتطوّع معانا" [ref=e41] [cursor=pointer]:
+            - /url: /volunteer
+            - img [ref=e42]
+            - text: اتطوّع معانا
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - generic [ref=e52]: ٠+
+        - paragraph [ref=e53]: شاب نستهدفهم
+      - generic [ref=e54]:
+        - text: ٠
+        - paragraph [ref=e55]: نصيحة شاركها الناس
+      - generic [ref=e56]:
+        - text: ٠
+        - paragraph [ref=e57]: يوم تكسبها بساعة يومياً
+      - generic [ref=e58]:
+        - text: ٠
+        - paragraph [ref=e59]: أيام تحدي يغيّر عادتك
+    - generic [ref=e61]:
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - img [ref=e65]
+          - text: من فين تبدأ؟
+        - heading "رحلتك مع رجّع وقتك" [level=2] [ref=e68]
+        - paragraph [ref=e69]: اختار اللي يناسبك وابدأ خطوتك الأولى دلوقتي.
+      - generic [ref=e70]:
+        - link "عن المبادرة اعرف رسالتنا وهدفنا وإزاي بنشتغل. ابدأ" [ref=e72] [cursor=pointer]:
+          - /url: /about
+          - img [ref=e74]
+          - heading "عن المبادرة" [level=3] [ref=e78]
+          - paragraph [ref=e79]: اعرف رسالتنا وهدفنا وإزاي بنشتغل.
+          - generic [ref=e80]:
+            - text: ابدأ
+            - img [ref=e81]
+        - link "اعرف واتحدى نفسك حقائق، اختبار، وتحدي 7 أيام يغيّر عادتك. ابدأ" [ref=e84] [cursor=pointer]:
+          - /url: /awareness
+          - img [ref=e86]
+          - heading "اعرف واتحدى نفسك" [level=3] [ref=e88]
+          - paragraph [ref=e89]: حقائق، اختبار، وتحدي 7 أيام يغيّر عادتك.
+          - generic [ref=e90]:
+            - text: ابدأ
+            - img [ref=e91]
+        - link "نصايح المجتمع اقرأ تجارب الناس وشارك نصيحتك. ابدأ" [ref=e94] [cursor=pointer]:
+          - /url: /advices
+          - img [ref=e96]
+          - heading "نصايح المجتمع" [level=3] [ref=e98]
+          - paragraph [ref=e99]: اقرأ تجارب الناس وشارك نصيحتك.
+          - generic [ref=e100]:
+            - text: ابدأ
+            - img [ref=e101]
+        - link "اتطوّع معانا انضم للفريق وساعد في نشر الرسالة. ابدأ" [ref=e104] [cursor=pointer]:
+          - /url: /volunteer
+          - img [ref=e106]
+          - heading "اتطوّع معانا" [level=3] [ref=e111]
+          - paragraph [ref=e112]: انضم للفريق وساعد في نشر الرسالة.
+          - generic [ref=e113]:
+            - text: ابدأ
+            - img [ref=e114]
+    - generic [ref=e117]:
+      - generic [ref=e119]:
+        - generic [ref=e120]:
+          - img [ref=e121]
+          - text: قصص نجاح
+        - heading "حصلت معاهم.. تقدر تحصل معاك" [level=2] [ref=e123]
+        - paragraph [ref=e124]: ناس بدأت خطوة صغيرة، وغيّرت علاقتها بالموبايل فعلاً.
+      - generic [ref=e125]:
+        - generic [ref=e127]:
+          - img [ref=e129]
+          - paragraph [ref=e131]: كنت بقضي 8 ساعات يومياً على الموبايل. بدأت بتحدي الـ7 أيام، ودلوقتي نزّلت لـ3 ساعات ورجّعت هواية الرسم اللي كنت سايبها.
+          - generic [ref=e132]:
+            - paragraph [ref=e133]: كريم — 19 سنة
+            - generic [ref=e134]: طالب جامعي
+        - generic [ref=e136]:
+          - img [ref=e138]
+          - paragraph [ref=e140]: أصعب حاجة كانت الصبح. أول ما بطّلت أمسك الموبايل أول ما أصحى، نومي اتحسّن وتركيزي في المذاكرة بقى أحسن بكتير.
+          - generic [ref=e141]:
+            - paragraph [ref=e142]: نورهان — 22 سنة
+            - generic [ref=e143]: متطوعة بالمبادرة
+        - generic [ref=e145]:
+          - img [ref=e147]
+          - paragraph [ref=e149]: طبّقنا فكرة (يوم بدون شاشة) في البيت مرة في الأسبوع. الأولاد في الأول اتضايقوا، دلوقتي بيستنوا اليوم ده عشان نقعد مع بعض.
+          - generic [ref=e150]:
+            - paragraph [ref=e151]: أبو يوسف — ولي أمر
+            - generic [ref=e152]: عائلة
+    - generic [ref=e156]:
+      - heading "جاهز ترجّع وقتك؟" [level=2] [ref=e157]
+      - paragraph [ref=e158]: ابدأ بخطوة صغيرة النهارده — اتحدى نفسك، أو ساعدنا نوصل الرسالة لشباب أكتر.
+      - generic [ref=e159]:
+        - link "اتحدى نفسك" [ref=e160] [cursor=pointer]:
+          - /url: /awareness
+          - img [ref=e161]
+          - text: اتحدى نفسك
+        - link "اتطوّع معانا" [ref=e163] [cursor=pointer]:
+          - /url: /volunteer
+          - img [ref=e164]
+          - text: اتطوّع معانا
+  - contentinfo [ref=e169]:
+    - generic [ref=e170]:
+      - generic [ref=e171]:
+        - generic [ref=e172]:
+          - img "رجّع وقتك" [ref=e174]
+          - generic [ref=e175]: رجّع وقتك
+        - paragraph [ref=e176]: مبادرة مجتمعية من أجل حياة أفضل بعيداً عن الشاشات — الموبايل مش حياتك.. حياتك بره الشاشة.
+      - generic [ref=e177]:
+        - heading "روابط سريعة" [level=4] [ref=e178]
+        - list [ref=e179]:
+          - listitem [ref=e180]:
+            - link "عن المبادرة" [ref=e181] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e182]:
+            - link "اعرف واتحدى" [ref=e183] [cursor=pointer]:
+              - /url: /awareness
+          - listitem [ref=e184]:
+            - link "نصايح المجتمع" [ref=e185] [cursor=pointer]:
+              - /url: /advices
+          - listitem [ref=e186]:
+            - link "تطوّع معانا" [ref=e187] [cursor=pointer]:
+              - /url: /volunteer
+          - listitem [ref=e188]:
+            - link "تواصل" [ref=e189] [cursor=pointer]:
+              - /url: /contact
+      - generic [ref=e190]:
+        - heading "تابعنا" [level=4] [ref=e191]
+        - generic [ref=e192]:
+          - link "واتساب" [ref=e193] [cursor=pointer]:
+            - /url: https://wa.me/201026319025
+          - link "إنستجرام" [ref=e194] [cursor=pointer]:
+            - /url: https://www.instagram.com/rag3_waktk?igsh=YjNza3A1cTY4M2cz
+          - link "تيليجرام" [ref=e195] [cursor=pointer]:
+            - /url: https://t.me/rag3waktk
+          - link "تيك توك" [ref=e196] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@user7105491487951?_r=1&_t=ZS-95paa8RFSA0
+          - link "فيسبوك" [ref=e197] [cursor=pointer]:
+            - /url: https://www.facebook.com/share/18RcozLb5u/
+    - generic [ref=e199]: © 2026 مبادرة رجّع وقتك — كل الحقوق محفوظة

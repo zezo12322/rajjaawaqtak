@@ -7,7 +7,6 @@ const FOOTER_LINKS = [
   { to: "/awareness", label: "اعرف واتحدى" },
   { to: "/advices", label: "نصايح المجتمع" },
   { to: "/volunteer", label: "تطوّع معانا" },
-  { to: "/donate", label: "ادعم المبادرة" },
   { to: "/contact", label: "تواصل" },
 ]
 

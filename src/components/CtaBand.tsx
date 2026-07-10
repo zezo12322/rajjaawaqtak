@@ -26,9 +26,9 @@ export default function CtaBand() {
                 <Icon name="zap" size={18} strokeWidth={2.2} />
                 اتحدى نفسك
               </Link>
-              <Link to="/donate" className="btn btn-line">
-                <Icon name="heart" size={18} strokeWidth={2.2} />
-                ادعم المبادرة
+              <Link to="/volunteer" className="btn btn-line">
+                <Icon name="handshake" size={18} strokeWidth={2.2} />
+                اتطوّع معانا
               </Link>
             </div>
           </div>

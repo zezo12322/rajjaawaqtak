@@ -9,7 +9,6 @@ const LINKS = [
   { to: "/about", label: "عن المبادرة" },
   { to: "/awareness", label: "اعرف واتحدى" },
   { to: "/advices", label: "نصايح المجتمع" },
-  { to: "/volunteer", label: "تطوّع" },
   { to: "/contact", label: "تواصل" },
 ]
 
@@ -63,9 +62,9 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
-          <Link to="/donate" className="btn btn-gold !py-2.5 !px-5 text-sm">
-            <Icon name="heart" size={17} strokeWidth={2.2} />
-            ادعمنا
+          <Link to="/volunteer" className="btn btn-gold !py-2.5 !px-5 text-sm">
+            <Icon name="handshake" size={17} strokeWidth={2.2} />
+            اتطوّع معانا
           </Link>
           <button
             onClick={() => setOpen((o) => !o)}

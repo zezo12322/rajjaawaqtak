@@ -2,16 +2,22 @@ import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import logo from "../assets/logo.jpg"
 import Icon from "./ui/Icon"
+import { FloatingPaths } from "@/components/ui/background-paths"
 
 export default function Hero() {
   return (
     <section className="relative pt-12 md:pt-16 pb-10 overflow-hidden">
+      {/* خلفية خطوط متحركة ناعمة */}
+      <div className="absolute inset-0 opacity-50 pointer-events-none">
+        <FloatingPaths position={1} />
+        <FloatingPaths position={-1} />
+      </div>
       {/* زخرفة خلفية ناعمة */}
       <div
         className="absolute -top-24 -left-24 w-[420px] h-[420px] rounded-full blur-3xl opacity-50 pointer-events-none"
         style={{ background: "radial-gradient(circle,#f6ead2,transparent 70%)" }}
       />
-      <div className="container-rw relative">
+      <div className="container-rw relative z-10">
         <div className="flex flex-col items-center text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -74,10 +80,6 @@ export default function Hero() {
             <Link to="/awareness" className="btn btn-gold">
               <Icon name="zap" size={18} strokeWidth={2.2} />
               ابدأ — اختبر نفسك
-            </Link>
-            <Link to="/volunteer" className="btn btn-ghost">
-              <Icon name="handshake" size={18} strokeWidth={2.2} />
-              اتطوّع معانا
             </Link>
           </motion.div>
         </div>

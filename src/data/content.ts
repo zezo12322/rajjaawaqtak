@@ -12,7 +12,6 @@ export const SOCIAL = {
 
 export const CONTACT = {
   joinPhone: "01026319025",
-  donatePhone: "01005153116",
 }
 
 /* ---------- حقائق عن الشاشات ---------- */
