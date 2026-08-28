@@ -3,15 +3,17 @@
    ============================================================ */
 
 export const SOCIAL = {
-  whatsapp: "https://wa.me/201026319025",
-  instagram: "https://www.instagram.com/rag3_waktk?igsh=YjNza3A1cTY4M2cz",
+  /** قناة المبادرة على واتساب — للمتابعة */
+  whatsappChannel: "https://whatsapp.com/channel/0029VbCJgqOIiRopjAY2cD0X",
+  /** رقم المبادرة على واتساب — للتواصل المباشر */
+  whatsapp: "https://wa.me/201275423412",
   telegram: "https://t.me/rag3waktk",
-  tiktok: "https://www.tiktok.com/@user7105491487951?_r=1&_t=ZS-95paa8RFSA0",
+  tiktok: "https://www.tiktok.com/@rag3_waktk8",
   facebook: "https://www.facebook.com/share/18RcozLb5u/",
 }
 
 export const CONTACT = {
-  joinPhone: "01026319025",
+  joinPhone: "01275423412",
 }
 
 /* ---------- حقائق عن الشاشات ---------- */
