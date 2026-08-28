@@ -45,8 +45,8 @@ export default function Footer() {
           <h4 className="font-extrabold text-[var(--ink)] mb-3">تابعنا</h4>
           <div className="flex flex-wrap gap-2">
             {[
+              { href: SOCIAL.whatsappChannel, label: "قناة الواتساب" },
               { href: SOCIAL.whatsapp, label: "واتساب" },
-              { href: SOCIAL.instagram, label: "إنستجرام" },
               { href: SOCIAL.telegram, label: "تيليجرام" },
               { href: SOCIAL.tiktok, label: "تيك توك" },
               { href: SOCIAL.facebook, label: "فيسبوك" },
