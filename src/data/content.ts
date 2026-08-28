@@ -3,10 +3,8 @@
    ============================================================ */
 
 export const SOCIAL = {
-  /** قناة المبادرة على واتساب — للمتابعة */
+  /** قناة المبادرة على واتساب — للمتابعة. التواصل المباشر عن طريق CONTACT.joinPhone */
   whatsappChannel: "https://whatsapp.com/channel/0029VbCJgqOIiRopjAY2cD0X",
-  /** رقم المبادرة على واتساب — للتواصل المباشر */
-  whatsapp: "https://wa.me/201275423412",
   telegram: "https://t.me/rag3waktk",
   tiktok: "https://www.tiktok.com/@rag3_waktk8",
   facebook: "https://www.facebook.com/share/18RcozLb5u/",

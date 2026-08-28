@@ -46,7 +46,6 @@ export default function Footer() {
           <div className="flex flex-wrap gap-2">
             {[
               { href: SOCIAL.whatsappChannel, label: "قناة الواتساب" },
-              { href: SOCIAL.whatsapp, label: "واتساب" },
               { href: SOCIAL.telegram, label: "تيليجرام" },
               { href: SOCIAL.tiktok, label: "تيك توك" },
               { href: SOCIAL.facebook, label: "فيسبوك" },
