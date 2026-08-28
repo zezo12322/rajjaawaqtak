@@ -6,6 +6,7 @@ import Icon from "./ui/Icon"
 const CARDS = [
   { to: "/about", icon: "target", title: "عن المبادرة", text: "اعرف رسالتنا وهدفنا وإزاي بنشتغل." },
   { to: "/awareness", icon: "zap", title: "اعرف واتحدى نفسك", text: "حقائق، اختبار، وتحدي 7 أيام يغيّر عادتك." },
+  { to: "/games", icon: "gamepad", title: "العب واتعلّم", text: "٤ ألعاب تفاعلية تحسّسك بالفكرة في دقايق." },
   { to: "/advices", icon: "message", title: "نصايح المجتمع", text: "اقرأ تجارب الناس وشارك نصيحتك." },
   { to: "/volunteer", icon: "handshake", title: "اتطوّع معانا", text: "انضم للفريق وساعد في نشر الرسالة." },
 ]
@@ -18,7 +19,7 @@ export default function PathCards() {
       title="رحلتك مع رجّع وقتك"
       sub="اختار اللي يناسبك وابدأ خطوتك الأولى دلوقتي."
     >
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
         {CARDS.map((c, i) => (
           <Reveal key={c.to} delay={i * 0.07}>
             <Link
