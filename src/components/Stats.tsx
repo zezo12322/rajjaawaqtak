@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Reveal from "./ui/Reveal"
 import { useCountUp } from "../hooks/useCountUp"
 import { supabase } from "../lib/supabase"
+import { SEED_ADVICES } from "../data/seedAdvices"
 
 function StatCard({ num, label, suffix = "" }: { num: number; label: string; suffix?: string }) {
   const { value, ref } = useCountUp(num)
@@ -17,14 +18,15 @@ function StatCard({ num, label, suffix = "" }: { num: number; label: string; suf
 }
 
 export default function Stats() {
-  const [adviceCount, setAdviceCount] = useState(0)
+  /* نصايح المبادرة التأسيسية + اللي الزوّار شاركوها */
+  const [adviceCount, setAdviceCount] = useState(SEED_ADVICES.length)
 
   useEffect(() => {
     supabase
       .from("rw_advices")
       .select("*", { count: "exact", head: true })
       .then(({ count }) => {
-        if (typeof count === "number") setAdviceCount(count)
+        if (typeof count === "number") setAdviceCount(SEED_ADVICES.length + count)
       })
   }, [])
 

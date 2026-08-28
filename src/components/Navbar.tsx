@@ -8,6 +8,7 @@ const LINKS = [
   { to: "/", label: "الرئيسية" },
   { to: "/about", label: "عن المبادرة" },
   { to: "/awareness", label: "اعرف واتحدى" },
+  { to: "/games", label: "العب واتعلّم" },
   { to: "/advices", label: "نصايح المجتمع" },
   { to: "/contact", label: "تواصل" },
 ]
